@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // - **Ejercicio 1**: Bucle for básico
+        // Muestra los números del 1 al 10 en la consola usando un bucle `for`.
+
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+
+        // - **Ejercicio 2**: for...of con array 
+        //Dado el array `const frutas = ['manzana', 'pera', 'plátano']`, recórrelo con `for...of` y muestra cada fruta por consola.
+
+        const frutas = ['manzana', 'pera', 'plátano'];
+        for (const fruta of frutas) {
+            console.log(fruta);
+        }
+
+        // Ejercicio 3: for...of con índice
+        //Dado el array const colores = ['rojo', 'verde', 'azul'], recórrelo con for...of usando .entries() y muestra por consola el índice y el color con el formato "Posición 0: rojo".
+
+        const colores = ['rojo', 'verde', 'azul'];
+        for (const [indice, color] of colores.entries()) {
+            console.log(`Posición ${indice}: ${color}`);
+        }
+
+        // Ejercicio 4: for...in con objeto
+        //Dado el objeto const libro = { titulo: 'El Quijote', autor: 'Cervantes', año: 1605 }, recórrelo con for...in y muestra cada clave y su valor por consola.
+
+        const libro = { titulo: 'El Quijote', autor: 'Cervantes', año: 1605 };
+        for (const clave in libro) {
+            console.log(`${clave}: ${libro[clave]}`);
+        }
+
+        // Ejercicio 5: for...of con Object.keys()
+        //Usando el mismo objeto libro del ejercicio anterior, recórrelo con for...of usando Object.keys() y muestra cada clave por consola.
+
+        const libro2 = { titulo: 'El Quijote', autor: 'Cervantes', año: 1605 };
+        for (const clave of Object.keys(libro2)) {
+            console.log(clave);
+        }
+
+        // Ejercicio 6: for...of con Object.values()
+        //Usando el mismo objeto libro, recórrelo con for...of usando Object.values() y muestra solo los valores por consola.
+
+        const libro3 = { titulo: 'El Quijote', autor: 'Cervantes', año: 1605 };
+        for (const valor of Object.values(libro3)) {
+            console.log(valor);
+        }
+
+        // Ejercicio 7: for...of con Object.entries()
+        //Usando el mismo objeto libro, recórrelo con for...of usando Object.entries() y muestra cada clave y valor con el formato "titulo: El Quijote".
+
+        const libro4 = { titulo: 'El Quijote', autor: 'Cervantes', año: 1605 };
+        for (const [clave, valor] of Object.entries(libro4)) {
+            console.log(`${clave}: ${valor}`);
+        }
+
+        // Ejercicio 8: while básico
+        //Usa un bucle while para mostrar los números del 5 al 1 en cuenta regresiva por consola.
+
+        let contador = 5;
+        while (contador >= 1) {
+            console.log(contador);
+            contador--;
+        }
+
+        // Ejercicio 9: do...while
+        //Usa un bucle do...while para mostrar los números pares del 2 al 10 por consola.
+
+        let num = 2;
+        do {
+            console.log(num);
+            num += 2;
+        } while (num <= 10);
+
+        // Ejercicio 10: forEach básico
+        //Dado el array const precios = [10, 20, 30, 40], usa forEach para mostrar cada precio con el formato "Precio: 10€" por consola
+
+
+        const precios = [10, 20, 30, 40];
+        precios.forEach(precio => {
+            console.log(`Precio: ${precio}€`);
+        });
+
+        // Ejercicio 11: for con incremento de 2
+        //Usa un bucle for para mostrar los números impares del 1 al 15 por consola.
+
+        for (let i = 1; i <= 15; i += 2) {
+            console.log(i);
+        }
+
+        // Ejercicio 12: for...of sumando elementos
+        //Dado el array const numeros = [5, 10, 15, 20], usa for...of para calcular y mostrar la suma total de todos los números.
+
+
+        const numeros = [5, 10, 15, 20];
+        let suma = 0;
+        for (const numero of numeros) {
+            suma += numero;
+        }
+        console.log(suma); // 50
+
+        // Ejercicio 13: for...in contando propiedades
+        //Dado el objeto const coche = { marca: 'Toyota', modelo: 'Corolla', año: 2020, color: 'blanco' }, usa for...in para contar y mostrar cuántas propiedades tiene el objeto.
+
+        const coche = { marca: 'Toyota', modelo: 'Corolla', año: 2020, color: 'blanco' };
+        let contadorProps = 0;
+        for (const clave in coche) {
+            contadorProps++;
+        }
+        console.log(`El objeto tiene ${contadorProps} propiedades`);
+
+        // Ejercicio 14: forEach con Object.entries()
+        //Dado el objeto const alumno = { nombre: 'Juan', edad: 20, curso: '2DAM' }, usa Object.entries() con forEach para mostrar cada propiedad con el formato "nombre: Juan".
+
+
+        const alumno = { nombre: 'Juan', edad: 20, curso: '2DAM' };
+        Object.entries(alumno).forEach(([clave, valor]) => {
+            console.log(`${clave}: ${valor}`);
+        });
+
+        // Ejercicio 15: while con condición
+        //Usa un bucle while para mostrar los múltiplos de 3 menores que 20 (3, 6, 9, 12, 15, 18).
+
+        let multiplo = 3;
+        while (multiplo < 20) {
+            console.log(multiplo);
+            multiplo += 3;
+        }
+
+        // Ejercicio 16: map
+        //Dado el array const temperaturas = [20, 25, 30, 35], usa map para crear un nuevo array con las temperaturas convertidas a Fahrenheit (fórmula: °F = °C × 1.8 + 32) y muéstralo por consola.
+
+        const temperaturas = [20, 25, 30, 35];
+        const fahrenheit = temperaturas.map(temp => temp * 1.8 + 32);
+        console.log(fahrenheit); // [68, 77, 86, 95]
+
+        // Ejercicio 17: filter
+        //Dado el array const edades = [12, 18, 25, 16, 30, 14], usa filter para crear un nuevo array solo con las edades mayores o iguales a 18 y muéstralo por consola.
+
+        const edades = [12, 18, 25, 16, 30, 14];
+        const mayoresDeEdad = edades.filter(edad => edad >= 18);
+        console.log(mayoresDeEdad); // [18, 25, 30]
+
+        // Ejercicio 18: for descendente
+        //Usa un bucle for para mostrar los números del 20 al 10 en orden descendente.
+
+        for (let i = 20; i >= 10; i--) {
+            console.log(i);
+        }
+
+        // Ejercicio 19: for...of con strings
+        //Dado el array const palabras = ['hola', 'mundo', 'javascript'], usa for...of para mostrar la longitud de cada palabra con el formato "hola tiene 4 letras".
+
+        const palabras = ['hola', 'mundo', 'javascript'];
+        for (const palabra of palabras) {
+            console.log(`${palabra} tiene ${palabra.length} letras`);
+        }
+
+        // Ejercicio 20: do...while con acumulador
+        //Usa un bucle do...while para calcular y mostrar la suma de los números del 1 al 5 (resultado: 15).
+
+        let num2 = 1;
+        let suma2 = 0;
+        do {
+            suma2 += num2;
+            num2++;
+        } while (num2 <= 5);
+        console.log(suma2); // 15 
+    </script>
+</body>
+
+</html>

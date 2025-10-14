@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #inner {
+            border: 1px solid red;
+            margin: 10px;
+        }
+        #outer {
+            border: 1px solid blue;
+            margin: 10px;
+        }
+        #button {
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">
+          <button id="button">Clic</button>
+        </div>
+      </div>
+      <script>
+// Seleccionar elementos
+const outer = document.getElementById('outer');
+const inner = document.getElementById('inner');
+const button = document.getElementById('button');
+
+// Fase de burbujeo (predeterminado)
+outer.addEventListener('click', () => console.log('Outer - Burbujeo'));
+inner.addEventListener('click', () => console.log('Inner - Burbujeo'));
+button.addEventListener('click', () => console.log('Button - Burbujeo'));
+
+      </script>
+</body>
+</html>
+</head>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Objeto con propiedades (incluido objeto anidado) y método
+        const coche = {
+            marca: "Toyota",
+            precio: 20000,
+            motor: {
+                tipo: "gasolina",
+                potencia: 150
+            },
+
+            // 2. Función como propiedad
+            arrancar() {
+                console.log("El coche arranca");
+            }
+        };
+
+        // 3. Añadir propiedad
+        coche.color = "rojo";
+
+        // 6. Propiedad calculada
+        Object.defineProperty(coche, 'precioIVA', {
+            get() {
+                return this.precio * 1.21;
+            }
+        });
+
+        // 4. Borrar propiedad
+        delete coche.motor;
+
+        // 5. Usar el objeto
+        coche.arrancar();                    // El coche arranca
+        console.log(coche.precioIVA);        // 24200   
+    </script>
+</body>
+
+</html>

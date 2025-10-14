@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=sc, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Explica y pon un ejemplo del uso del operador … 
+        //usado para compresión y descompresión (ambas cosas).
+
+        //..descompresión
+        let frutas1 = ['manzana', 'pera'];
+        let frutas2 = ['naranja', ...frutas1, 'platano'];
+        //Aquí ...frutas1 descomprime el array ['manzana', 'pera'] dentro del nuevo array.
+
+        console.log(frutas2); // Resultado: ['naranja', 'manzana', 'pera', 'plátano']
+
+
+
+        //...compresion Se usa para "recolectar" varios valores en una sola variable.
+
+        function mostrarNombres(nombre, ...apellidos) {
+            console.log('nombre: ', nombre);
+            console.log('apellidos: ', apellidos);
+
+        }
+        mostrarNombres('Rocio', 'Pacheco', 'Ponce'); // muestra nombre :rocio apellidos ['pacheco','ponce' ]
+
+
+        const numeros = [10, 20, 30];
+
+        // SPREAD (expansión/descompresión)
+        const nuevo = [0, ...numeros, 40, 50];
+        console.log(nuevo); // [0, 10, 20, 30, 40, 50]
+
+        // REST (agrupación/compresión)
+        function sumarTodos(...nums) {
+            let suma = 0;
+            for (let i = 0; i < nums.length; i++) {
+                suma += nums[i];
+            }
+            return suma;
+        }
+        console.log(sumarTodos(5, 10, 15, 20)); // 50
+
+        // Respuesta:
+        // - La primera operación (crear nuevo array) es EXPANSIÓN/DESCOMPRESIÓN
+        // - La segunda operación (parámetros de función) es AGRUPACIÓN/COMPRESIÓN
+
+
+    </script>
+</body>
+
+</html>

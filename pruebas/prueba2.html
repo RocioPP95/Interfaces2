@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+
+    <STYle>
+
+    </STYle>
+</head>
+
+<body>
+
+    <h1>Contador</h1>
+    <h2 id="contador">0</h2>
+
+    <button id="restar">-</button>
+    <button id="reset">Reset</button>
+    <button id="sumar">+</button>
+
+    <h1>Cambiar color</h1>
+    <button id="cambiar">Cambiar color</button>
+    <div id="colorActual">Color actual: #FFFFFF</div>
+
+
+
+
+    <script>
+        //obtener referencias a los elementos del DOM
+        const contadorElement = document.getElementById('contador');
+        const buttonElement = document.getElementById('reset');
+        const restarElement = document.getElementById('restar');
+        const sumarElement = document.getElementById('sumar');
+
+
+
+        //variable para mantener el valor del contador
+        let contador = 0;
+
+        //funcion para incrementar el contador
+        const resetContador = () => {
+            contador = 0;
+
+            //Actualizar el texto en el Dom
+            contadorElement.textContent = contador;
+        };
+        const restarContador = () => {
+            contador--;
+
+            //Actualizar el texto en el Dom
+            contadorElement.textContent = contador;
+        };
+        const sumarContador = () => {
+            contador++;
+
+            //Actualizar el texto en el Dom
+            contadorElement.textContent = contador;
+        };
+
+
+
+        //Añadir el event listener al botón
+        buttonElement.addEventListener('click', resetContador);
+        restarElement.addEventListener('click', restarContador);
+        sumarElement.addEventListener('click', sumarContador);
+
+
+        // color actual
+
+        const botonCambiar = document.getElementById('cambiar');
+        const colorActualElement = document.getElementById('colorActual');
+
+
+        // Función para generar un color aleatorio en formato hexadecimal
+        const generarColorAleatorio = () => {
+            // Generar un número hexadecimal de 6 dígitos
+            const colorHex = Math.floor(Math.random() * 16777215).toString(16);
+
+            // Asegurarse de que tiene 6 dígitos (añadiendo ceros a la izquierda si es necesario)
+            return '#' + colorHex.padStart(6, '0').toUpperCase();
+        };
+        // Función para cambiar el color de fondo
+        const cambiarColorFondo = () => {
+            // Generar un nuevo color
+            const nuevoColor = generarColorAleatorio();
+
+            // Aplicar el color al fondo
+            document.body.style.backgroundColor = nuevoColor;
+
+            // Actualizar el texto que muestra el color actual
+            colorActualElement.textContent = `Color actual: ${nuevoColor}`;
+        };
+        // Añadir el event listener al botón
+        botonCambiar.addEventListener('click', cambiarColorFondo);
+
+    </script>
+</body>
+
+</html>

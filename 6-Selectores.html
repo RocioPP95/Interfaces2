@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Ejercicio 1: Selector por ID
+        document.getElementById('titulo-principal').style.backgroundColor = 'yellow';
+
+        // Ejercicio 2: Selector por clase (único)
+        document.querySelector('.producto').style.backgroundColor = 'lightblue';
+
+        // Ejercicio 3: Selector por clase (todos)
+        document.querySelectorAll('.producto').forEach(elemento => {
+            elemento.style.backgroundColor = 'lightgreen';
+        });
+
+        // Ejercicio 4: Selector por etiqueta
+        document.querySelectorAll('p').forEach(elemento => {
+            elemento.style.backgroundColor = 'pink';
+        });
+
+        // Ejercicio 5: Selector por clase específica
+        document.querySelectorAll('.oferta').forEach(elemento => {
+            elemento.style.backgroundColor = 'orange';
+        });
+
+        // Ejercicio 6: Selector por ID con querySelector
+        document.querySelector('#ofertas').style.backgroundColor = 'lightgray';
+
+        // Ejercicio 7: Selector de etiqueta h2
+        document.querySelectorAll('h2').forEach(elemento => {
+            elemento.style.backgroundColor = 'violet';
+        });
+
+        // Ejercicio 8: Selector por etiqueta span
+        document.querySelectorAll('span').forEach(elemento => {
+            elemento.style.backgroundColor = 'cyan';
+        });
+
+        // Ejercicio 9: Selector de etiqueta div
+        document.querySelectorAll('div').forEach(elemento => {
+            elemento.style.backgroundColor = 'beige';
+        });
+
+        // Ejercicio 10: Selector de footer
+        document.querySelector('footer').style.backgroundColor = 'lavender';
+
+        // Ejercicio 11: Selector nth-child (segundo elemento)
+        document.querySelector('.producto:nth-of-type(2)').style.backgroundColor = 'coral';
+
+        // Ejercicio 12: Selector de primer elemento
+        document.querySelector('.oferta:first-of-type').style.backgroundColor = 'turquoise';
+
+        // Ejercicio 13: Selector de último elemento
+        document.querySelector('.producto:last-of-type').style.backgroundColor = 'salmon';
+
+        // Ejercicio 14: Selector múltiple de etiquetas
+        document.querySelectorAll('h1').forEach(elemento => {
+            elemento.style.backgroundColor = 'peachpuff';
+        });
+
+        // Ejercicio 15: Selector por clase destacado
+        document.querySelector('.destacado').style.backgroundColor = 'gold';
+
+        // Ejercicio 16: Selector nth-child (tercer elemento)
+        document.querySelector('.producto:nth-of-type(3)').style.backgroundColor = 'lightcyan';
+
+        // Ejercicio 17: Selector de todos los h2
+        document.querySelectorAll('h2').forEach(elemento => {
+            elemento.style.backgroundColor = 'thistle';
+        });
+
+        // Ejercicio 18: Selector del primer div
+        document.querySelector('div:first-of-type').style.backgroundColor = 'aquamarine';
+
+        // Ejercicio 19: Selector de segundo p con clase oferta
+        document.querySelector('.oferta:nth-of-type(2)').style.backgroundColor = 'lightpink';
+
+        // Ejercicio 20: Selector de body
+        document.querySelector('body').style.backgroundColor = 'cornsilk';
+    </script>
+</body>
+
+</html>
