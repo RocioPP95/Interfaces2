@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Event Listener</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio de Event Listener</h1>
+
+    <!-- 1. Crear el botón -->
+    <button id="btnCambiarColor">Cambiar Color</button>
+
+    <script>
+        // 2. Event Listener básico
+        const boton = document.getElementById('btnCambiarColor');
+        const colores = ['lightblue', 'lightgreen', 'lightyellow', 'lightpink', 'lavender'];
+        let indice = 0;
+
+        boton.addEventListener('click', function () {
+            document.body.style.backgroundColor = colores[indice];
+            indice = (indice + 1) % colores.length; // Rotar entre colores
+        });
+    </script>
+</body>
+
+</html>

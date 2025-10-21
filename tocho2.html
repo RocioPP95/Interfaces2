@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor de Números Binarios</title>
+</head>
+
+<body>
+    <h1>Constructor de Números Binarios</h1>
+
+    <p id="display"></p>
+
+    <button id="btn0">0</button>
+    <button id="btn1">1</button>
+
+    <script>
+        const display = document.getElementById('display');
+        const btn0 = document.getElementById('btn0');
+        const btn1 = document.getElementById('btn1');
+
+        let numeroBinario = '';
+
+        btn0.addEventListener('click', function () {
+            numeroBinario += '0';
+            display.textContent = numeroBinario;
+        });
+
+        btn1.addEventListener('click', function () {
+            numeroBinario += '1';
+            display.textContent = numeroBinario;
+        });
+    </script>
+</body>
+
+</html>
