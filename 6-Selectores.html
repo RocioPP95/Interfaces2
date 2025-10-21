@@ -10,79 +10,99 @@
 <body>
     <script>
         // Ejercicio 1: Selector por ID
+        //  Selecciona el elemento con id titulo-principal y cámbiale el color de fondo a amarillo (yellow).
         document.getElementById('titulo-principal').style.backgroundColor = 'yellow';
 
-        // Ejercicio 2: Selector por clase (único)
+        // Ejercicio 2: Selector por clase (único) Selecciona el primer elemento con clase producto y cámbiale el color de fondo a azul claro (lightblue).
         document.querySelector('.producto').style.backgroundColor = 'lightblue';
 
-        // Ejercicio 3: Selector por clase (todos)
+        // Ejercicio 3: Selector por clase (todos) 
+        // Selecciona todos los elementos con clase producto y cámbiales el color de fondo a verde claro (lightgreen).
         document.querySelectorAll('.producto').forEach(elemento => {
             elemento.style.backgroundColor = 'lightgreen';
         });
 
         // Ejercicio 4: Selector por etiqueta
+        //  Selecciona todos los elementos <p> del documento y cámbiales el color de fondo a rosa (pink).
         document.querySelectorAll('p').forEach(elemento => {
             elemento.style.backgroundColor = 'pink';
         });
 
         // Ejercicio 5: Selector por clase específica
+        //  Selecciona todos los elementos con clase oferta y cámbiales el color de fondo a naranja (orange).
         document.querySelectorAll('.oferta').forEach(elemento => {
             elemento.style.backgroundColor = 'orange';
         });
 
         // Ejercicio 6: Selector por ID con querySelector
+        //  Selecciona el elemento con id ofertas usando querySelector y cámbiale el color de fondo a gris claro (lightgray).
         document.querySelector('#ofertas').style.backgroundColor = 'lightgray';
 
         // Ejercicio 7: Selector de etiqueta h2
+        //  Selecciona todos los <h2> del documento y cámbiales el color de fondo a violeta (violet).
+        
         document.querySelectorAll('h2').forEach(elemento => {
             elemento.style.backgroundColor = 'violet';
         });
 
-        // Ejercicio 8: Selector por etiqueta span
+        // Ejercicio 8: Selector por etiqueta span 
+        // Selecciona todos los elementos <span> y cámbiales el color de fondo a cian (cyan).
         document.querySelectorAll('span').forEach(elemento => {
             elemento.style.backgroundColor = 'cyan';
         });
 
-        // Ejercicio 9: Selector de etiqueta div
+        // Ejercicio 9: Selector de etiqueta div 
+        // Selecciona todos los elementos <div> y cámbiales el color de fondo a beige (beige).
         document.querySelectorAll('div').forEach(elemento => {
             elemento.style.backgroundColor = 'beige';
         });
 
-        // Ejercicio 10: Selector de footer
+        // Ejercicio 10: Selector de footer 
+        // Selecciona el elemento <footer> y cámbiale el color de fondo a lavanda (lavender).
         document.querySelector('footer').style.backgroundColor = 'lavender';
 
-        // Ejercicio 11: Selector nth-child (segundo elemento)
+        // Ejercicio 11: Selector nth-child (segundo elemento) 
+        // Selecciona el segundo <div> con clase producto (usando .producto:nth-of-type(2)) y cámbiale el color de fondo a coral (coral).
         document.querySelector('.producto:nth-of-type(2)').style.backgroundColor = 'coral';
 
-        // Ejercicio 12: Selector de primer elemento
+        // Ejercicio 12: Selector de primer elemento 
+        // Selecciona el primer <p> con clase oferta y cámbiale el color de fondo a turquesa (turquoise).
         document.querySelector('.oferta:first-of-type').style.backgroundColor = 'turquoise';
 
-        // Ejercicio 13: Selector de último elemento
+        // Ejercicio 13: Selector de último elemento 
+        // Selecciona el último <div> con clase producto (usando .producto:last-of-type) y cámbiale el color de fondo a salmón (salmon).
         document.querySelector('.producto:last-of-type').style.backgroundColor = 'salmon';
 
-        // Ejercicio 14: Selector múltiple de etiquetas
+        // Ejercicio 14: Selector múltiple de etiquetas 
+        // Selecciona todos los <h1> del documento y cámbiales el color de fondo a melocotón (peachpuff).
         document.querySelectorAll('h1').forEach(elemento => {
             elemento.style.backgroundColor = 'peachpuff';
         });
 
-        // Ejercicio 15: Selector por clase destacado
+        // Ejercicio 15: Selector por clase destacado 
+        // Selecciona el elemento con clase destacado y cámbiale el color de fondo a dorado (gold).
         document.querySelector('.destacado').style.backgroundColor = 'gold';
 
-        // Ejercicio 16: Selector nth-child (tercer elemento)
+        // Ejercicio 16: Selector nth-child (tercer elemento) 
+        // Selecciona el tercer <div> con clase producto (usando .producto:nth-of-type(3)) y cámbiale el color de fondo a menta (lightcyan).
         document.querySelector('.producto:nth-of-type(3)').style.backgroundColor = 'lightcyan';
 
-        // Ejercicio 17: Selector de todos los h2
+        // Ejercicio 17: Selector de todos los h2 
+        // Selecciona todos los <h2> y cámbiales el color de fondo a lila (thistle).
         document.querySelectorAll('h2').forEach(elemento => {
             elemento.style.backgroundColor = 'thistle';
         });
 
-        // Ejercicio 18: Selector del primer div
+        // Ejercicio 18: Selector del primer div 
+        // Selecciona el primer <div> del documento (usando div:first-of-type) y cámbiale el color de fondo a verde agua (aquamarine).
         document.querySelector('div:first-of-type').style.backgroundColor = 'aquamarine';
 
-        // Ejercicio 19: Selector de segundo p con clase oferta
+        // Ejercicio 19: Selector de segundo p con clase oferta 
+        // Selecciona el segundo <p> con clase oferta (usando .oferta:nth-of-type(2)) y cámbiale el color de fondo a rosa claro (lightpink).
         document.querySelector('.oferta:nth-of-type(2)').style.backgroundColor = 'lightpink';
-
-        // Ejercicio 20: Selector de body
+ 
+        // Ejercicio 20: Selector de body 
+        // Selecciona el elemento <body> y cámbiale el color de fondo a crema (cornsilk).
         document.querySelector('body').style.backgroundColor = 'cornsilk';
     </script>
 </body>
